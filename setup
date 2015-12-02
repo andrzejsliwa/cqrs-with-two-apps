@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cd read-model-side
+bundle install
+rake db:setup
+
+cd ../write-model-side
+bundle install
+rake db:setup
+
+cd ../
+bundle install
