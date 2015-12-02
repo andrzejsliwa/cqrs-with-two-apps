@@ -16,7 +16,7 @@ class OrdersController < ApplicationController
   def create
     cmd = Domain::Commands::CreateOrder.new(order_params)
     execute(cmd)
-    redirect_to Order.find_by_uid(cmd.order_id), notice: 'Order was successfully created.'
+    redirect_to "/orders/#{cmd.order_id}", notice: 'Order was successfully created.'
   end
 
   private
