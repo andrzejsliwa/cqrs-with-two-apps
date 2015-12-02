@@ -1,5 +1,5 @@
 /.bundle
-
+/eventstore
 /read-model-side/db/*.sqlite3
 /read-model-side/db/*.sqlite3-journal
 /read-model-side/log/*.log

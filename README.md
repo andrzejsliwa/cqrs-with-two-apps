@@ -18,5 +18,6 @@ This is an experiment to take CQRS on application/stack level and have two appli
     ./setup
     ./run
 
+You will also need a copy of EvenStore in `./eventstore` directory. Get it from https://geteventstore.com/downloads/.
 
 
