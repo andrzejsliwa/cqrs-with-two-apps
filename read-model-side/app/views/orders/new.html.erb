@@ -22,7 +22,7 @@
   </tbody>
 </table>
 
-<%= form_tag({controller: "orders", action: "create"}, method: "post") do %>
+<%= form_tag("/orders", method: "post") do %>
   <%= hidden_field_tag(:order_id, @order_id) %>
   <p>Customer:
     <%= select_tag(:customer_id, options_from_collection_for_select(@customers, :id, :name)) %>
