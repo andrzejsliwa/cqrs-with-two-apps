@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @order       = Order.find(params[:id])
+    @order       = Order.find_by_uid(params[:id])
     @order_lines = OrderLine.where(order_uid: @order.uid)
   end
 
