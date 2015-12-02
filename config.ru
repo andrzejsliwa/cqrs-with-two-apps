@@ -8,6 +8,12 @@ class Glue < Rack::Proxy
                    : 'localhost:4001'
     env
   end
+
+  def rewrite_response(response_array)
+    status, headers, body = response_array
+    headers['Location'][0].gsub!(/:4001/, ':4000') if headers['Location']
+    [status, headers, body]
+  end
 end
 
 run Glue.new
