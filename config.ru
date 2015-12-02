@@ -6,6 +6,7 @@ class Glue < Rack::Proxy
     env['HTTP_HOST'] = 
       request.get? ? 'localhost:4002' 
                    : 'localhost:4001'
+    env
   end
 end
 
